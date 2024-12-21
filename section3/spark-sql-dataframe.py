@@ -5,7 +5,7 @@ spark: SparkSession = SparkSession.builder.appName("FakeFriendsHeader").getOrCre
 people = spark.read.option("header", "true").option("inferSchema", "true")\
   .csv("file:///SparkCourse/section3/data/fakefriends-header.csv")
   
-print("here is our inferred schema:")
+print("Here is our inferred schema:")
 people.printSchema()
 
 print("Let's display the name column:")
